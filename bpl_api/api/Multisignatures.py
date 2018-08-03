@@ -26,37 +26,3 @@ class Multisignatures(Resource):
         return self.get("multisignatures/accounts", {
             "publicKey": public_key
         })
-
-    def sign(self, id, secret, public_key=None):
-        """
-        Sign a transaction with a secret passphrase
-
-        :param id: transactionId of the transaction (string)
-        :param secret: secret passphrase for the next signature (string)
-        :param public_key: public key for the sender (string)
-        :return: (dict)
-        """
-
-        return self.post("multisignatures/sign", json={
-            "transactionId": id,
-            "secret": secret,
-            "publicKey": public_key
-        })
-
-    def add_multisignature(self, secret, lifetime, min, keysgroup):
-        """
-        Adds a multisignature to a transaction
-
-        :param secret: secret passphrase for the account (string)
-        :param lifetime: #TODO
-        :param min: #TODO
-        :param keysgroup: #TODO
-        :return: (dict)
-        """
-
-        return self.put("multisignatures", json={
-            "secret": secret,
-            "lifetime": lifetime,
-            "min": min,
-            "keysgroup": keysgroup
-        })
