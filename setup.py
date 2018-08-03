@@ -8,7 +8,8 @@ requires = [
 ]
 
 packages = [
-    "bpl_api"
+    "bpl_api",
+    "bpl_api.api"
 ]
 
 setuptools.setup(
