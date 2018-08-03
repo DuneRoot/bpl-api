@@ -18,11 +18,13 @@ class Connection:
 
         self._session.headers.update({
             "port": "1",
-            "Content-Type": "application/json",
             "os": "linux3.2.0-4-amd64",
             "version": "0.3.0",
             "nethash": self._get_nethash()
         })
+
+    def get_address(self):
+        return self._address
 
     def _get_nethash(self):
         """
@@ -84,17 +86,20 @@ class Connection:
         ))
 
     def post(self, path, json=None, params=None):
+        self.post_url(self._get_url(path), json=json, params=params)
+
+    def post_url(self, url, json=None, params=None):
         """
         Performs a POST request
 
-        :param path: api endpoint path (string)
+        :param url: URL of api resource (string)
         :param json: json for request (dict)
         :param params: parameters for request (dict)
         :return: (dict)
         """
 
         return self._handle_response(self._session.post(
-            self._get_url(path),
+            url,
             json=json,
             params=params
         ))
