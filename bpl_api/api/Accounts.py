@@ -51,21 +51,3 @@ class Accounts(Resource):
         """
 
         return self.get("accounts/delegates", {"address": address})
-
-    def vote(self, delegates, secret, second_secret=None, public_key=None):
-        """
-        Vote for a delegate
-
-        :param delegates: #TODO
-        :param secret: secret passphrase (string)
-        :param second_secret: second secret passphrase (string)
-        :param public_key: public key (string)
-        :return: (dict)
-        """
-
-        return self.put("accounts/delegates", json={
-            "secret": secret,
-            "delegates": delegates,
-            "secondSecret": second_secret,
-            "publicKey": public_key
-        })
