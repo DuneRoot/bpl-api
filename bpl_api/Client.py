@@ -27,11 +27,11 @@ class Client:
         api_endpoint = api_endpoint.lower()
 
         if api_endpoint not in API_ENDPOINTS:
-          raise BPLAPIException({
+            raise BPLAPIException({
               "message": "api endpoint not valid.",
               "api endpoint": api_endpoint,
               "api endpoints": API_ENDPOINTS
-          })
+            })
 
         return getattr(
             import_module("bpl_api.api.{0}".format(api_endpoint.capitalize())),
