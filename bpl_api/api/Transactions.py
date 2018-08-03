@@ -49,11 +49,13 @@ class Transactions(Resource):
             "address": address
         })
 
-    def send(self, recipient_id, amount, secret, second_secret=None, public_key=None):
-        return self.put("transactions", json={
-            "recipientId": recipient_id,
-            "amount": amount,
-            "secret": secret,
-            "secondSecret": second_secret,
-            "publicKey": public_key
-        })
+    def _post_transaction(self, transaction):
+        return self._connection.post_url(
+            "http://" + self._connection.get_address() + "/peer/transactions",
+            json={
+                "transactions": [transaction]
+            }
+        )
+
+    def send(self, transaction):
+        return self._post_transaction(transaction)
