@@ -12,7 +12,6 @@ This is a easy-to-use Python API for interacting with a Blockpool blockchain. Th
 - [x] Retrieve the public key of an account
 - [x] Retrieve the delegate registration fee
 - [x] Retrieve the voted delegate of an account
-- [ ] Vote for a delegate
 
 ### Blocks Endpoint
 - [x] Retrieve for a block
@@ -35,9 +34,6 @@ This is a easy-to-use Python API for interacting with a Blockpool blockchain. Th
 - [x] List all voters of a delegate
 - [x] List all delegates
 - [x] Search all delegates
-- [x] Change status from account to delegate
-- [x] Enable forging for the delegate
-- [x] Disable forging for the delegate
 - [x] List the next forgers
 - [x] Retrieve the forging status of a delegate
 
@@ -48,9 +44,7 @@ This is a easy-to-use Python API for interacting with a Blockpool blockchain. Th
 
 ### Multisignature Endpoint
 - [x] Retrieve the pending multisignature transactions of an account
-- [ ] multisignatures/accounts
-- [ ] multisignatures/sign
-- [ ] multisignatures/
+- [ ] Retrieve a multisignature account
 
 ### Peers Endpoint
 - [x] Retrieve a peer
@@ -59,7 +53,6 @@ This is a easy-to-use Python API for interacting with a Blockpool blockchain. Th
 
 ### Signatures Endpoint
 - [x] Retrieve the signature registration fee
-- [ ] signatures/
 
 ### Transaction Endpoint
 - [x] Retrieve a transaction
