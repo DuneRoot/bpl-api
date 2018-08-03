@@ -85,46 +85,6 @@ class Delegates(Resource):
             "limit": limit
         })
 
-    def enable_delegate(self, username, secret, second_secret=None):
-        """
-        Change status from account to delegate
-
-        :param username: username for the account (string)
-        :param secret: secret passphrase of the account (string)
-        :param second_secret: second secret passphrase of the account (string)
-        :return: (dict)
-        """
-
-        return self.put("delegates", json={
-            "username": username,
-            "secret": secret,
-            "secondSecret": second_secret
-        })
-
-    def enable_forging(self, secret):
-        """
-        Enable forging for the delegate
-
-        :param secret: secret passphrase for the delegate (string)
-        :return: (dict)
-        """
-
-        self.post("delegates/forging/enable", json={
-            "secret": secret
-        })
-
-    def disable_forging(self, secret):
-        """
-        Disable forging for the delegate
-
-        :param secret: secret passphrase for the delegate (string)
-        :return: (dict)
-        """
-
-        self.post("delegates/forging/disable", json={
-            "secret": secret
-        })
-
     def next_forgers(self, limit=25):
         """
         Lists the next forgers
