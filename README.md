@@ -3,9 +3,9 @@
 > A simple Python API for the Blockpool blockchain
 
 This is a easy-to-use Python API for interacting with a Blockpool blockchain. This API provides a Python wrapper for the majority of the API endpoints for [BPL-Node](https://github.com/blockpool-io/BPL-node)
- 
+
 ## Features
- 
+
 ### Accounts Endpoint
 - [x] Retrieve an account
 - [x] Retrieve the balance of an account
@@ -68,11 +68,10 @@ This is a easy-to-use Python API for interacting with a Blockpool blockchain. Th
 - [x] DELETE
 
 ## Installation
-```sh
-pip install bpl-api
-```
 
-Note: not working as of 2018-07-26
+```sh
+python -m pip install bpl-api
+```
 
 ## Usage
 
@@ -95,7 +94,7 @@ accounts_endpoint = Client("s01.mc.blockpool.io:9030").api("accounts")
 ```
 
 See the documented code for how each endpoint may be used.
- 
+
 ## Security or Errors
 
 
