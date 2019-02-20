@@ -98,7 +98,7 @@ See the documented code for how each endpoint may be used.
 ## Security or Errors
 
 
-If you discover a security vulnerability or error within this package, please email [me](mailto:alistair.o'brien@ellesmere.com) or message me on the [BPL discord](https://discordapp.com/invite/67HxSKq).
+If you discover a security vulnerability or error within this package, please email [me](mailto:alistair@duneroot.co.uk) or message me on the [BPL discord](https://discordapp.com/invite/67HxSKq).
 
 ## Credits
 
